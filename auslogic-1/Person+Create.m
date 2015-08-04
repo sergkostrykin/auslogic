@@ -7,14 +7,15 @@
 //
 
 #import "Person+Create.h"
+#import "DataFetcher.h"
 
 @implementation Person (Create)
 
-+ (Person *)personWithPersonDictionary:(NSDictionary *)personDictionary
++ (Person *)personWithPersonInfo:(NSDictionary *)personDictionary
                 inManagedObjectContext:(NSManagedObjectContext *)context
 {
     Person *person = nil;
-     NSInteger *personId = personDictionary[PERSON_ID];
+     NSInteger personId = [personDictionary[PERSON_ID] integerValue];
     
     
     if (personId) {
@@ -29,13 +30,15 @@
         } else if (![matches count]) {
             person = [NSEntityDescription insertNewObjectForEntityForName:@"Person"
                                                          inManagedObjectContext:context];
-            photographer.name = [personDictionary valueForKeyPath:PERSON_NAME];
+            person.personName = [personDictionary valueForKeyPath:PERSON_NAME];
+            person.personCountry = [personDictionary valueForKeyPath:PERSON_COUNTRY];
+            
         } else {
             person = [matches lastObject];
         }
     }
     
-    return photographer;
+    return person;
 }
 
 @end

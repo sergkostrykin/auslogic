@@ -20,6 +20,7 @@
 		5C572F6D1B710EFC0010195E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6C1B710EFC0010195E /* Person.m */; };
 		5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6F1B710F910010195E /* CoreDataTableViewController.m */; };
 		5C572F731B7116430010195E /* Person+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F721B7116430010195E /* Person+Create.m */; };
+		5CC37F101B71650700A3796C /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC37F0F1B71650700A3796C /* DataFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		5C572F6F1B710F910010195E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		5C572F711B7116430010195E /* Person+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+Create.h"; sourceTree = "<group>"; };
 		5C572F721B7116430010195E /* Person+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+Create.m"; sourceTree = "<group>"; };
+		5CC37F0E1B71650700A3796C /* DataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetcher.h; sourceTree = "<group>"; };
+		5CC37F0F1B71650700A3796C /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				5C572F6C1B710EFC0010195E /* Person.m */,
 				5C572F711B7116430010195E /* Person+Create.h */,
 				5C572F721B7116430010195E /* Person+Create.m */,
+				5CC37F0E1B71650700A3796C /* DataFetcher.h */,
+				5CC37F0F1B71650700A3796C /* DataFetcher.m */,
 				5C572F411B710A030010195E /* AppDelegate.h */,
 				5C572F681B710E280010195E /* Model.xcdatamodeld */,
 				5C572F421B710A030010195E /* AppDelegate.m */,
@@ -257,6 +262,7 @@
 				5C572F731B7116430010195E /* Person+Create.m in Sources */,
 				5C572F461B710A030010195E /* ViewController.m in Sources */,
 				5C572F431B710A030010195E /* AppDelegate.m in Sources */,
+				5CC37F101B71650700A3796C /* DataFetcher.m in Sources */,
 				5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */,
 				5C572F6D1B710EFC0010195E /* Person.m in Sources */,
 				5C572F401B710A030010195E /* main.m in Sources */,
