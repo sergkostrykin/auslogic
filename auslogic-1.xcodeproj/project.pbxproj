@@ -14,6 +14,12 @@
 		5C572F4B1B710A030010195E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F4A1B710A030010195E /* Images.xcassets */; };
 		5C572F4E1B710A030010195E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F4C1B710A030010195E /* LaunchScreen.xib */; };
 		5C572F5A1B710A030010195E /* auslogic_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F591B710A030010195E /* auslogic_1Tests.m */; };
+		5C572F651B710D6A0010195E /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F641B710D6A0010195E /* person.png */; };
+		5C572F671B710DCF0010195E /* country.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F661B710DCF0010195E /* country.png */; };
+		5C572F6A1B710E280010195E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F681B710E280010195E /* Model.xcdatamodeld */; };
+		5C572F6D1B710EFC0010195E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6C1B710EFC0010195E /* Person.m */; };
+		5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6F1B710F910010195E /* CoreDataTableViewController.m */; };
+		5C572F731B7116430010195E /* Person+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F721B7116430010195E /* Person+Create.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,15 @@
 		5C572F531B710A030010195E /* auslogic-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "auslogic-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C572F581B710A030010195E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C572F591B710A030010195E /* auslogic_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = auslogic_1Tests.m; sourceTree = "<group>"; };
+		5C572F641B710D6A0010195E /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		5C572F661B710DCF0010195E /* country.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = country.png; sourceTree = "<group>"; };
+		5C572F691B710E280010195E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		5C572F6B1B710EFC0010195E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
+		5C572F6C1B710EFC0010195E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
+		5C572F6E1B710F910010195E /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		5C572F6F1B710F910010195E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		5C572F711B7116430010195E /* Person+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+Create.h"; sourceTree = "<group>"; };
+		5C572F721B7116430010195E /* Person+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+Create.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +96,21 @@
 		5C572F3C1B710A030010195E /* auslogic-1 */ = {
 			isa = PBXGroup;
 			children = (
+				5C572F6B1B710EFC0010195E /* Person.h */,
+				5C572F6C1B710EFC0010195E /* Person.m */,
+				5C572F711B7116430010195E /* Person+Create.h */,
+				5C572F721B7116430010195E /* Person+Create.m */,
 				5C572F411B710A030010195E /* AppDelegate.h */,
+				5C572F681B710E280010195E /* Model.xcdatamodeld */,
 				5C572F421B710A030010195E /* AppDelegate.m */,
 				5C572F441B710A030010195E /* ViewController.h */,
 				5C572F451B710A030010195E /* ViewController.m */,
+				5C572F6E1B710F910010195E /* CoreDataTableViewController.h */,
+				5C572F6F1B710F910010195E /* CoreDataTableViewController.m */,
 				5C572F471B710A030010195E /* Main.storyboard */,
 				5C572F4A1B710A030010195E /* Images.xcassets */,
 				5C572F4C1B710A030010195E /* LaunchScreen.xib */,
+				5C572F631B710D500010195E /* Resourses */,
 				5C572F3D1B710A030010195E /* Supporting Files */,
 			);
 			path = "auslogic-1";
@@ -117,6 +140,16 @@
 				5C572F581B710A030010195E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C572F631B710D500010195E /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				5C572F641B710D6A0010195E /* person.png */,
+				5C572F661B710DCF0010195E /* country.png */,
+			);
+			name = Resourses;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C572F671B710DCF0010195E /* country.png in Resources */,
 				5C572F491B710A030010195E /* Main.storyboard in Resources */,
+				5C572F651B710D6A0010195E /* person.png in Resources */,
 				5C572F4E1B710A030010195E /* LaunchScreen.xib in Resources */,
 				5C572F4B1B710A030010195E /* Images.xcassets in Resources */,
 			);
@@ -219,9 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C572F731B7116430010195E /* Person+Create.m in Sources */,
 				5C572F461B710A030010195E /* ViewController.m in Sources */,
 				5C572F431B710A030010195E /* AppDelegate.m in Sources */,
+				5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */,
+				5C572F6D1B710EFC0010195E /* Person.m in Sources */,
 				5C572F401B710A030010195E /* main.m in Sources */,
+				5C572F6A1B710E280010195E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +457,7 @@
 				5C572F5F1B710A030010195E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C572F601B710A030010195E /* Build configuration list for PBXNativeTarget "auslogic-1Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,8 +466,22 @@
 				5C572F621B710A030010195E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C572F681B710E280010195E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C572F691B710E280010195E /* Model.xcdatamodel */,
+			);
+			currentVersion = 5C572F691B710E280010195E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C572F321B710A030010195E /* Project object */;
 }
