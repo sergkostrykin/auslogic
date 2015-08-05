@@ -20,6 +20,7 @@
 		5C572F6D1B710EFC0010195E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6C1B710EFC0010195E /* Person.m */; };
 		5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F6F1B710F910010195E /* CoreDataTableViewController.m */; };
 		5C572F731B7116430010195E /* Person+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F721B7116430010195E /* Person+Create.m */; };
+		5C6EB7D71B720DB6001F90D6 /* PersonsCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6EB7D61B720DB6001F90D6 /* PersonsCDTVC.m */; };
 		5CC37F101B71650700A3796C /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC37F0F1B71650700A3796C /* DataFetcher.m */; };
 		5CC37F131B716DA700A3796C /* AppDelegate+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC37F121B716DA700A3796C /* AppDelegate+MOC.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		5C572F6F1B710F910010195E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		5C572F711B7116430010195E /* Person+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+Create.h"; sourceTree = "<group>"; };
 		5C572F721B7116430010195E /* Person+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+Create.m"; sourceTree = "<group>"; };
+		5C6EB7D51B720DB6001F90D6 /* PersonsCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonsCDTVC.h; sourceTree = "<group>"; };
+		5C6EB7D61B720DB6001F90D6 /* PersonsCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsCDTVC.m; sourceTree = "<group>"; };
 		5CC37F0E1B71650700A3796C /* DataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetcher.h; sourceTree = "<group>"; };
 		5CC37F0F1B71650700A3796C /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetcher.m; sourceTree = "<group>"; };
 		5CC37F111B716DA700A3796C /* AppDelegate+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MOC.h"; sourceTree = "<group>"; };
@@ -103,23 +106,18 @@
 		5C572F3C1B710A030010195E /* auslogic-1 */ = {
 			isa = PBXGroup;
 			children = (
-				5C572F6B1B710EFC0010195E /* Person.h */,
-				5C572F6C1B710EFC0010195E /* Person.m */,
-				5C572F711B7116430010195E /* Person+Create.h */,
-				5C572F721B7116430010195E /* Person+Create.m */,
+				5C6EB7D41B720D81001F90D6 /* Controller */,
+				5C6EB7D31B720D1C001F90D6 /* View */,
+				5C6EB7D21B720CF8001F90D6 /* Core Data Model */,
 				5CC37F181B716FC800A3796C /* DatabaseAvailability.h */,
 				5CC37F0E1B71650700A3796C /* DataFetcher.h */,
 				5CC37F0F1B71650700A3796C /* DataFetcher.m */,
-				5C572F681B710E280010195E /* Model.xcdatamodeld */,
 				5C572F411B710A030010195E /* AppDelegate.h */,
 				5C572F421B710A030010195E /* AppDelegate.m */,
 				5CC37F111B716DA700A3796C /* AppDelegate+MOC.h */,
 				5CC37F121B716DA700A3796C /* AppDelegate+MOC.m */,
 				5C572F441B710A030010195E /* ViewController.h */,
 				5C572F451B710A030010195E /* ViewController.m */,
-				5C572F6E1B710F910010195E /* CoreDataTableViewController.h */,
-				5C572F6F1B710F910010195E /* CoreDataTableViewController.m */,
-				5C572F471B710A030010195E /* Main.storyboard */,
 				5C572F4A1B710A030010195E /* Images.xcassets */,
 				5C572F4C1B710A030010195E /* LaunchScreen.xib */,
 				5C572F631B710D500010195E /* Resourses */,
@@ -162,6 +160,37 @@
 			);
 			name = Resourses;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		5C6EB7D21B720CF8001F90D6 /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C572F681B710E280010195E /* Model.xcdatamodeld */,
+				5C572F6B1B710EFC0010195E /* Person.h */,
+				5C572F6C1B710EFC0010195E /* Person.m */,
+				5C572F711B7116430010195E /* Person+Create.h */,
+				5C572F721B7116430010195E /* Person+Create.m */,
+			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		5C6EB7D31B720D1C001F90D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C572F471B710A030010195E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5C6EB7D41B720D81001F90D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C572F6E1B710F910010195E /* CoreDataTableViewController.h */,
+				5C572F6F1B710F910010195E /* CoreDataTableViewController.m */,
+				5C6EB7D51B720DB6001F90D6 /* PersonsCDTVC.h */,
+				5C6EB7D61B720DB6001F90D6 /* PersonsCDTVC.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +300,7 @@
 				5C572F461B710A030010195E /* ViewController.m in Sources */,
 				5C572F431B710A030010195E /* AppDelegate.m in Sources */,
 				5CC37F101B71650700A3796C /* DataFetcher.m in Sources */,
+				5C6EB7D71B720DB6001F90D6 /* PersonsCDTVC.m in Sources */,
 				5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */,
 				5C572F6D1B710EFC0010195E /* Person.m in Sources */,
 				5C572F401B710A030010195E /* main.m in Sources */,

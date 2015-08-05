@@ -20,7 +20,7 @@
     
     if (personId) {
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
-        request.predicate = [NSPredicate predicateWithFormat:@"personId = %@", personId];
+        request.predicate = [NSPredicate predicateWithFormat:@"personId = %i", personId];
         
         NSError *error;
         NSArray *matches = [context executeFetchRequest:request error:&error];
@@ -40,5 +40,16 @@
     
     return person;
 }
+
++ (void)loadDataFromArray:(NSArray *)persons intoManagedObjectContext:(NSManagedObjectContext *)context
+
+
+{
+    for (NSDictionary *person in persons) {
+        [self personWithPersonInfo:person inManagedObjectContext:context];
+    }
+}
+
+
 
 @end

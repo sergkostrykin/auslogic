@@ -13,4 +13,8 @@
 + (Person *)personWithPersonInfo:(NSDictionary *) personDictionary
                 inManagedObjectContext:(NSManagedObjectContext *)context;
 
++ (void)loadDataFromArray:(NSArray *)persons // of person NSDictionary
+         intoManagedObjectContext:(NSManagedObjectContext *)context;
+
+
 @end
