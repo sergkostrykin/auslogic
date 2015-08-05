@@ -25,16 +25,18 @@
         NSError *error;
         NSArray *matches = [context executeFetchRequest:request error:&error];
         
-        if (!matches || ([matches count] > 1)) {
             // handle error
-        } else if (![matches count]) {
-            person = [NSEntityDescription insertNewObjectForEntityForName:@"Person"
-                                                         inManagedObjectContext:context];
+        
+    
+        if (!matches || error || ([matches count] > 1)) {
+        } else if ([matches count]) {
+            person = [matches firstObject];
+        } else         
+        {
+            person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
             person.personName = [personDictionary valueForKeyPath:PERSON_NAME];
             person.personCountry = [personDictionary valueForKeyPath:PERSON_COUNTRY];
             
-        } else {
-            person = [matches lastObject];
         }
     }
     
