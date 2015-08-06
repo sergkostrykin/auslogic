@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>auslogic-1 copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>auslogic-1.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5C0110311B735DC800ABFB3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5C572F391B710A030010195E</key>
 		<dict>
 			<key>primary</key>

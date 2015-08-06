@@ -15,29 +15,21 @@
                 inManagedObjectContext:(NSManagedObjectContext *)context
 {
     Person *person = nil;
-     NSInteger personId = [personDictionary[PERSON_ID] integerValue];
-    
-    
-    if (personId) {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
-        request.predicate = [NSPredicate predicateWithFormat:@"personId = %i", personId];
-        
-        NSError *error;
-        NSArray *matches = [context executeFetchRequest:request error:&error];
-        
-            // handle error
-        
-    
-        if (!matches || error || ([matches count] > 1)) {
-        } else if ([matches count]) {
+    NSString *unique = personDictionary[PERSON_ID];
+    NSNumber *personID = [NSNumber numberWithInteger:[unique integerValue]];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
+    request.predicate = [NSPredicate predicateWithFormat:@"personId = %d", [unique intValue]];
+    NSError *error;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    if (!matches || error || ([matches count] > 1)) {
+        // error
+    } else if ([matches count]) {
             person = [matches firstObject];
-        } else         
-        {
-            person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
-            person.personName = [personDictionary valueForKeyPath:PERSON_NAME];
-            person.personCountry = [personDictionary valueForKeyPath:PERSON_COUNTRY];
-            
-        }
+    } else {
+        person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
+        person.personName = [personDictionary valueForKeyPath:PERSON_NAME];
+        person.personCountry = [personDictionary valueForKeyPath:PERSON_COUNTRY];
+        person.personId = personID;
     }
     
     return person;

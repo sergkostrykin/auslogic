@@ -1,16 +1,16 @@
 //
-//  PersonsCDTVC.m
+//  CountriesCDTVC.m
 //  auslogic-1
 //
-//  Created by Sergiy Kostrykin on 8/5/15.
+//  Created by Sergiy Kostrykin on 8/6/15.
 //  Copyright (c) 2015 Sergiy Kostrykin. All rights reserved.
 //
 
-#import "PersonsCDTVC.h"
+#import "CountriesCDTVC.h"
 #import "Person.h"
 #import "DatabaseAvailability.h"
 
-@implementation PersonsCDTVC
+@implementation CountriesCDTVC
 
 - (void)awakeFromNib
 {
@@ -27,10 +27,10 @@
     _managedObjectContext = managedObjectContext;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
     request.predicate = nil;
-//    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId"
-//                                                              ascending:YES
-//                                                               selector:@selector(localizedStandardCompare:)]];
-
+    //    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId"
+    //                                                              ascending:YES
+    //                                                               selector:@selector(localizedStandardCompare:)]];
+    
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId" ascending:YES]];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
@@ -41,12 +41,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Person Cell"];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Country Cell"];
     
     Person *person = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = person.personName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Person ID: %@", person.personId];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", person.personCountry];
     return cell;
 }
 

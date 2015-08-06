@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C01104B1B73697200ABFB3E /* CountriesCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C01104A1B73697200ABFB3E /* CountriesCDTVC.m */; };
 		5C572F401B710A030010195E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F3F1B710A030010195E /* main.m */; };
 		5C572F431B710A030010195E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F421B710A030010195E /* AppDelegate.m */; };
 		5C572F461B710A030010195E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F451B710A030010195E /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0110481B735DC800ABFB3E /* auslogic-1 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "auslogic-1 copy-Info.plist"; path = "/Users/sergiykostrykin/Work/My/auslogic/auslogic-1 copy-Info.plist"; sourceTree = "<absolute>"; };
+		5C0110491B73697200ABFB3E /* CountriesCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesCDTVC.h; sourceTree = "<group>"; };
+		5C01104A1B73697200ABFB3E /* CountriesCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesCDTVC.m; sourceTree = "<group>"; };
 		5C572F3A1B710A030010195E /* auslogic-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "auslogic-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C572F3E1B710A030010195E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C572F3F1B710A030010195E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				5C572F3C1B710A030010195E /* auslogic-1 */,
 				5C572F561B710A030010195E /* auslogic-1Tests */,
 				5C572F3B1B710A030010195E /* Products */,
+				5C0110481B735DC800ABFB3E /* auslogic-1 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +194,8 @@
 				5C572F6F1B710F910010195E /* CoreDataTableViewController.m */,
 				5C6EB7D51B720DB6001F90D6 /* PersonsCDTVC.h */,
 				5C6EB7D61B720DB6001F90D6 /* PersonsCDTVC.m */,
+				5C0110491B73697200ABFB3E /* CountriesCDTVC.h */,
+				5C01104A1B73697200ABFB3E /* CountriesCDTVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 				5C572F701B710F910010195E /* CoreDataTableViewController.m in Sources */,
 				5C572F6D1B710EFC0010195E /* Person.m in Sources */,
 				5C572F401B710A030010195E /* main.m in Sources */,
+				5C01104B1B73697200ABFB3E /* CountriesCDTVC.m in Sources */,
 				5C572F6A1B710E280010195E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
