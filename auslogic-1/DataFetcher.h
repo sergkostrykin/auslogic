@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-// key paths to photos or places at top-level of Flickr results
 #define PERSON_DATA @"person"
-//#define FLICKR_RESULTS_PLACES @"places.place"
 
-// keys (paths) to values in a person dictionary
 #define PERSON_ID @"id"
 #define PERSON_NAME @"name"
 #define PERSON_COUNTRY @"country"

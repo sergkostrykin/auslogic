@@ -10,7 +10,6 @@
 		5C01104B1B73697200ABFB3E /* CountriesCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C01104A1B73697200ABFB3E /* CountriesCDTVC.m */; };
 		5C572F401B710A030010195E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F3F1B710A030010195E /* main.m */; };
 		5C572F431B710A030010195E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F421B710A030010195E /* AppDelegate.m */; };
-		5C572F461B710A030010195E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C572F451B710A030010195E /* ViewController.m */; };
 		5C572F491B710A030010195E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F471B710A030010195E /* Main.storyboard */; };
 		5C572F4B1B710A030010195E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F4A1B710A030010195E /* Images.xcassets */; };
 		5C572F4E1B710A030010195E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C572F4C1B710A030010195E /* LaunchScreen.xib */; };
@@ -45,8 +44,6 @@
 		5C572F3F1B710A030010195E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C572F411B710A030010195E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C572F421B710A030010195E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C572F441B710A030010195E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C572F451B710A030010195E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5C572F481B710A030010195E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C572F4A1B710A030010195E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C572F4D1B710A030010195E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -111,20 +108,13 @@
 		5C572F3C1B710A030010195E /* auslogic-1 */ = {
 			isa = PBXGroup;
 			children = (
-				5C6EB7D41B720D81001F90D6 /* Controller */,
-				5C6EB7D31B720D1C001F90D6 /* View */,
-				5C6EB7D21B720CF8001F90D6 /* Core Data Model */,
-				5CC37F181B716FC800A3796C /* DatabaseAvailability.h */,
-				5CC37F0E1B71650700A3796C /* DataFetcher.h */,
-				5CC37F0F1B71650700A3796C /* DataFetcher.m */,
 				5C572F411B710A030010195E /* AppDelegate.h */,
 				5C572F421B710A030010195E /* AppDelegate.m */,
 				5CC37F111B716DA700A3796C /* AppDelegate+MOC.h */,
 				5CC37F121B716DA700A3796C /* AppDelegate+MOC.m */,
-				5C572F441B710A030010195E /* ViewController.h */,
-				5C572F451B710A030010195E /* ViewController.m */,
-				5C572F4A1B710A030010195E /* Images.xcassets */,
-				5C572F4C1B710A030010195E /* LaunchScreen.xib */,
+				5C6EB7D41B720D81001F90D6 /* Controller */,
+				5C6EB7D31B720D1C001F90D6 /* View */,
+				5C6EB7D21B720CF8001F90D6 /* Core Data Model */,
 				5C572F631B710D500010195E /* Resourses */,
 				5C572F3D1B710A030010195E /* Supporting Files */,
 			);
@@ -134,6 +124,8 @@
 		5C572F3D1B710A030010195E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5C572F4C1B710A030010195E /* LaunchScreen.xib */,
+				5C572F4A1B710A030010195E /* Images.xcassets */,
 				5C572F3E1B710A030010195E /* Info.plist */,
 				5C572F3F1B710A030010195E /* main.m */,
 			);
@@ -175,6 +167,9 @@
 				5C572F6C1B710EFC0010195E /* Person.m */,
 				5C572F711B7116430010195E /* Person+Create.h */,
 				5C572F721B7116430010195E /* Person+Create.m */,
+				5CC37F0E1B71650700A3796C /* DataFetcher.h */,
+				5CC37F0F1B71650700A3796C /* DataFetcher.m */,
+				5CC37F181B716FC800A3796C /* DatabaseAvailability.h */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -304,7 +299,6 @@
 			files = (
 				5CC37F131B716DA700A3796C /* AppDelegate+MOC.m in Sources */,
 				5C572F731B7116430010195E /* Person+Create.m in Sources */,
-				5C572F461B710A030010195E /* ViewController.m in Sources */,
 				5C572F431B710A030010195E /* AppDelegate.m in Sources */,
 				5CC37F101B71650700A3796C /* DataFetcher.m in Sources */,
 				5C6EB7D71B720DB6001F90D6 /* PersonsCDTVC.m in Sources */,

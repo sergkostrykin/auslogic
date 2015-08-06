@@ -20,6 +20,7 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
     request.predicate = [NSPredicate predicateWithFormat:@"personId = %d", [unique intValue]];
     NSError *error;
+    
     NSArray *matches = [context executeFetchRequest:request error:&error];
     if (!matches || error || ([matches count] > 1)) {
         // error

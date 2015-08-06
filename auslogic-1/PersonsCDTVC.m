@@ -21,6 +21,21 @@
                                                       self.managedObjectContext = note.userInfo[DatabaseAvailabilityContext];
                                                   }];
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSInteger randomID = arc4random() % 6;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
+    request.predicate = [NSPredicate predicateWithFormat:@"personId = %d", randomID];
+    NSError *error;
+    NSArray *matches = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([matches count]) {
+        Person *person = [matches firstObject];
+        person.personName = @"AAA";
+    }
+    
+}
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

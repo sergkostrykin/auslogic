@@ -20,6 +20,23 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       self.managedObjectContext = note.userInfo[DatabaseAvailabilityContext];
                                                   }];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSInteger randomID = arc4random() % 6;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
+    request.predicate = [NSPredicate predicateWithFormat:@"personId = %d", randomID];
+    NSError *error;
+    NSArray *matches = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([matches count]) {
+        Person *person = [matches firstObject];
+        person.personName = @"AAA";
+    }
+    
 }
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
@@ -27,17 +44,18 @@
     _managedObjectContext = managedObjectContext;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
     request.predicate = nil;
-    //    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId"
-    //                                                              ascending:YES
-    //                                                               selector:@selector(localizedStandardCompare:)]];
+        request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personCountry"
+                                                                  ascending:YES
+                                                                   selector:@selector(localizedStandardCompare:)]];
     
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId" ascending:YES]];
+//    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"personId" ascending:YES]];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:managedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
